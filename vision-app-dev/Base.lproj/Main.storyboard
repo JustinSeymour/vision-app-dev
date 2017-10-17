@@ -24,7 +24,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-VV-oe3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.42734041810000001" green="0.74081873890000005" blue="0.38825222850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-aN-hkq" customClass="RoundedShadowView" customModule="vision_app_dev" customModuleProvider="target">
                                 <rect key="frame" x="20" y="50" width="335" height="76"/>
@@ -76,7 +76,14 @@
                                 <state key="normal" title="FLASH OFF">
                                     <color key="titleColor" red="0.84705882352941175" green="0.27843137254901962" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="flashBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VqV-bq-cUy"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5zw-b6-irh">
+                                <rect key="frame" x="307" y="573" width="20" height="20"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -88,8 +95,10 @@
                             <constraint firstItem="J4c-VV-oe3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GOZ-jk-u4t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2VB-09-HrH" secondAttribute="bottom" constant="20" id="HZR-3W-hBk"/>
                             <constraint firstItem="1UN-aN-hkq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Hdt-mE-MTV"/>
+                            <constraint firstItem="5zw-b6-irh" firstAttribute="centerY" secondItem="2VB-09-HrH" secondAttribute="centerY" id="JsG-Bh-rSb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2MH-FU-BmZ" secondAttribute="bottom" constant="20" id="UV4-Lw-Twf"/>
                             <constraint firstItem="2MH-FU-BmZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UrW-m8-Fpz"/>
+                            <constraint firstItem="5zw-b6-irh" firstAttribute="centerX" secondItem="2VB-09-HrH" secondAttribute="centerX" id="Z18-Ja-FTy"/>
                             <constraint firstItem="J4c-VV-oe3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gZl-MT-G4L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1UN-aN-hkq" secondAttribute="trailing" constant="20" id="qa3-p4-9Ix"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2VB-09-HrH" secondAttribute="trailing" constant="20" id="wdm-kk-OZi"/>
@@ -103,6 +112,7 @@
                         <outlet property="flashBtn" destination="2MH-FU-BmZ" id="xy3-HK-yF6"/>
                         <outlet property="identificationLbl" destination="LVh-X2-eYf" id="60N-jL-AzI"/>
                         <outlet property="roundedLblView" destination="1UN-aN-hkq" id="awu-wj-92W"/>
+                        <outlet property="spinner" destination="5zw-b6-irh" id="Eqi-E5-v8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
